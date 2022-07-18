@@ -18,6 +18,16 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
             require(it.exists()) { "Input file '$it' does not exist." }
         }
 
+    private val outputFolder by option("--output-folder", help = "path to artifact doc output folder")
+        .file()
+        .required()
+        .validate {
+            require(it.parentFile.exists()) { "Output parent folder '${it.parentFile.absolutePath}' does not exist." }
+            if (!it.exists()) {
+                require(it.mkdir()) { "Output folder '${it.absolutePath}' could not be created" }
+            }
+        }
+
     override fun run() {
         val inputFile = adocInputFile
 
@@ -26,7 +36,7 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
         val options = Options.builder()
             .safe(SafeMode.UNSAFE)
             .backend("pdf")
-            .toFile(File("../output.pdf"))
+            .toFile(File(outputFolder.absolutePath + File.separator + inputFile.nameWithoutExtension + ".pdf"))
             .build()
 
         val asciidoctor = Asciidoctor.Factory.create()
