@@ -16,6 +16,8 @@ on: [push]
 #  release:
 #    types: [created]
 
+run: chmod +x ./asciidoc/gradlew
+
 jobs:
   build:
 
