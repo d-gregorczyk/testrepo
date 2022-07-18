@@ -9,6 +9,7 @@ name: Gradle Package
 
 defaults:
   run:
+    shell: bash
     working-directory: asciidoc
     
 on: [push]
