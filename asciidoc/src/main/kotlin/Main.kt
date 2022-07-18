@@ -11,22 +11,24 @@ import java.io.File
 fun main(args: Array<String>) = PublishSdpi().main(args)
 
 class PublishSdpi : CliktCommand("publish-sdpi") {
-    private val adocInputFile by option("--input-file", help = "path to ascii doc input file")
-        .file()
-        .required()
-        .validate {
-            require(it.exists()) { "Input file '$it' does not exist." }
-        }
-
-    private val outputFolder by option("--output-folder", help = "path to artifact doc output folder")
-        .file()
-        .required()
-        .validate {
-            require(it.parentFile.exists()) { "Output parent folder '${it.parentFile.absolutePath}' does not exist." }
-            if (!it.exists()) {
-                require(it.mkdir()) { "Output folder '${it.absolutePath}' could not be created" }
-            }
-        }
+    //    private val adocInputFile by option("--input-file", help = "path to ascii doc input file")
+//        .file()
+//        .required()
+//        .validate {
+//            require(it.exists()) { "Input file '$it' does not exist." }
+//        }
+//
+//    private val outputFolder by option("--output-folder", help = "path to artifact doc output folder")
+//        .file()
+//        .required()
+//        .validate {
+//            require(it.parentFile.exists()) { "Output parent folder '${it.parentFile.absolutePath}' does not exist." }
+//            if (!it.exists()) {
+//                require(it.mkdir()) { "Output folder '${it.absolutePath}' could not be created" }
+//            }
+//        }
+    private val adocInputFile = File("../input.adoc")
+    private val outputFolder = File("../sdpi-supplement")
 
     override fun run() {
         val inputFile = adocInputFile
