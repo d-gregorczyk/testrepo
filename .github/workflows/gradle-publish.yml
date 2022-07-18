@@ -41,7 +41,7 @@ jobs:
         build-root-directory: asciidoc
         
     - name: Publish artifact
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: sdpi-supplement
         path: sdpi-supplement
