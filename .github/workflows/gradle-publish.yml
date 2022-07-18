@@ -7,6 +7,10 @@
 
 name: Gradle Package
 
+defaults:
+  run:
+    working-directory: asciidoc
+    
 on: [push]
 #  release:
 #    types: [created]
@@ -30,7 +34,6 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Gradle
-      working-directory: asciidoc
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
