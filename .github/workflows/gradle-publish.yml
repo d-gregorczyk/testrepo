@@ -26,8 +26,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Permissions
-      run: chmod +x ./asciidoc/gradlew
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -39,7 +37,7 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: build
+        arguments: run --args="FOO BAR"
         build-root-directory: asciidoc
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
