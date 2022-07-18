@@ -39,7 +39,7 @@ jobs:
       with:
         arguments: | 
           run
-          --args=--input-file ../input.adoc --output-folder sdpi-supplement
+          --args="--input-file ../input.adoc --output-folder sdpi-supplement"
         build-root-directory: asciidoc
         
     - name: Publish artifact
