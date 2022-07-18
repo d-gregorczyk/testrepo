@@ -35,9 +35,11 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Run with Gradle
+      env: 
+        ARGS: '--args="--input-file ../input.adoc --output-folder sdpi-supplement"'
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: run
+        arguments: run $ARGS
         build-root-directory: asciidoc
         
     - name: Publish artifact
