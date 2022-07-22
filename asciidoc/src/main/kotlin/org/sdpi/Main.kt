@@ -37,6 +37,8 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
             it
         }.build(true))
 
+        
+
         logger.info { "Start conversion of '${adocInputFile.canonicalPath}'" }
 
         val outFile = File(
