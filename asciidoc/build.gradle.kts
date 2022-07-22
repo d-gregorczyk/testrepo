@@ -41,9 +41,9 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.named<JavaCompile>("compileJava") {
-    options.compilerArgs = listOf("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED")
-}
+//tasks.named<JavaCompile>("compileJava") {
+//    options.compilerArgs = listOf("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED")
+//}
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"

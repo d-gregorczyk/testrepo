@@ -1,4 +1,7 @@
 import com.github.ajalt.clikt.core.CliktCommand
+import org.apache.logging.log4j.Level
+import org.apache.logging.log4j.core.config.Configurator
+import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory
 import org.apache.logging.log4j.kotlin.Logging
 import org.asciidoctor.Asciidoctor
 import org.asciidoctor.Options
@@ -24,11 +27,16 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
 //                require(it.mkdir()) { "Output folder '${it.absolutePath}' could not be created" }
 //            }
 
-    private val adocInputFile = File("./input.adoc")
-    private val outputFolder = File(".")
+    private val adocInputFile = File("../sdpi-supplement.adoc")
+    private val outputFolder = File("../sdpi-supplement")
     private val backend = "pdf" // html
 
     override fun run() {
+        Configurator.initialize(ConfigurationBuilderFactory.newConfigurationBuilder().let {
+            it.newRootLogger(Level.INFO)
+            it
+        }.build(true))
+
         logger.info { "Start conversion of '${adocInputFile.canonicalPath}'" }
 
         val outFile = File(
