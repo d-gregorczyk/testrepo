@@ -39,7 +39,7 @@ jobs:
       #  ARGS: '--args="--input-file ../input.adoc --output-folder sdpi-supplement"'
       uses: gradle/gradle-build-action@v2
       with:
-        arguments: run --info --args "--input-file ../input.adoc"
+        arguments: run --info --args='--input-file ../input.adoc'
         build-root-directory: asciidoc
         
     - name: Publish artifact
