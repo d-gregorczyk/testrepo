@@ -14,6 +14,7 @@ import org.sdpi.asciidoc.extension.RequirementsBlockProcessor
 import java.io.File
 
 fun main(args: Array<String>) = args.let {
+    println(System.getenv().containsKey("CI"))
     println(args.joinToString(";"))
     PublishSdpi().main(args)
 }
