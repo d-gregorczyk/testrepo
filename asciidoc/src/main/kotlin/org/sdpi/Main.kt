@@ -13,7 +13,10 @@ import org.asciidoctor.SafeMode
 import org.sdpi.asciidoc.extension.RequirementsBlockProcessor
 import java.io.File
 
-fun main(args: Array<String>) = PublishSdpi().main(args)
+fun main(args: Array<String>) = args.let {
+    println(args.joinToString(";"))
+    PublishSdpi().main(args)
+}
 
 class PublishSdpi : CliktCommand("publish-sdpi") {
     private companion object : Logging
