@@ -16,6 +16,9 @@ on: [push]
 #  release:
 #    types: [created]
 
+env:
+  CI: true
+  
 jobs:
   build:
 
