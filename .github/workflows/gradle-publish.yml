@@ -38,24 +38,13 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Run with Gradle
-      #env: 
-      #  ARGS: '--args="--input-file ../input.adoc --output-folder sdpi-supplement"'
       uses: gradle/gradle-build-action@v2
       with:
-        arguments: run --args="--input-file '../input.adoc'"
+        arguments: run --args="--input-file ../sdpi-supplement.adoc --output-folder ../sdpi-supplement"
         build-root-directory: asciidoc
         
-    - name: Publish artifact
+    - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: sdpi-supplement
         path: sdpi-supplement
-    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
-    # the publishing section of your build.gradle
-    #- name: Publish to GitHub Packages
-    #  uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-    #  with:
-    #    arguments: publish
-    #  env:
-    #    USERNAME: ${{ github.actor }}
-    #    TOKEN: ${{ secrets.GITHUB_TOKEN }}
