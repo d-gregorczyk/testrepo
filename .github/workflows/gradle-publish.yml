@@ -37,10 +37,16 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
-    - name: Run with Gradle
+    - name: Create PDF with Gradle
       uses: gradle/gradle-build-action@v2
       with:
-        arguments: run --args="--input-file ../sdpi-supplement.adoc --output-folder ../sdpi-supplement"
+        arguments: run --args="--input-file ../sdpi-supplement.adoc --output-folder ../sdpi-supplement --backend pdf"
+        build-root-directory: asciidoc
+        
+    - name: Run HTML with Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: run --args="--input-file ../sdpi-supplement.adoc --output-folder ../sdpi-supplement --backend html"
         build-root-directory: asciidoc
         
     - name: Upload artifact
