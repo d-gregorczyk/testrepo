@@ -41,7 +41,8 @@ jobs:
       with:
         arguments: run --args="--input-file ../sdpi-supplement.adoc --output-folder ../sdpi-supplement --backend html"
         build-root-directory: asciidoc
-        
+    
+    - if: success() && github.ref == 'refs/heads/master'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
