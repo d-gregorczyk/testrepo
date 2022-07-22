@@ -1,4 +1,8 @@
 import com.github.ajalt.clikt.core.CliktCommand
+import com.github.ajalt.clikt.parameters.options.default
+import com.github.ajalt.clikt.parameters.options.option
+import com.github.ajalt.clikt.parameters.options.validate
+import com.github.ajalt.clikt.parameters.types.file
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.core.config.Configurator
 import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory
@@ -15,10 +19,12 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
     private companion object : Logging
 
     // for some reason, github actions do not digest double quotes correctly right now - requires hard coded config
-//    private val adocInputFile by option("--input-file", help = "path to ascii doc input file").file().required()
-//        .validate {
-//            require(it.exists()) { "Input file '$it' does not exist." }
-//        }
+    private val adocInputFile by option("--input-file", help = "path to ascii doc input file").file().default(
+        File("../sdpi-supplement.adoc")
+    )
+        .validate {
+            require(it.exists()) { "Input file '$it' does not exist." }
+        }
 //
 //    private val outputFolder by option("--output-folder", help = "path to artifact doc output folder").file().required()
 //        .validate {
@@ -27,7 +33,7 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
 //                require(it.mkdir()) { "Output folder '${it.absolutePath}' could not be created" }
 //            }
 
-    private val adocInputFile = File("../sdpi-supplement.adoc")
+    //private val adocInputFile = File("../sdpi-supplement.adoc")
     private val outputFolder = File("../sdpi-supplement")
     private val backend = "pdf" // html
 
@@ -37,7 +43,7 @@ class PublishSdpi : CliktCommand("publish-sdpi") {
             it
         }.build(true))
 
-        
+
 
         logger.info { "Start conversion of '${adocInputFile.canonicalPath}'" }
 
