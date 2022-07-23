@@ -1,9 +1,15 @@
 package org.sdpi.asciidoc
 
 /**
- * Resolves the block attribute from an attributes map.
+ * Resolves the block id attribute from an attributes map.
  */
 fun blockId(attributes: Map<String, Any>) = attributes[BlockAttribute.ID.key].toString()
+
+/**
+ * Resolves the block title attribute from an attributes map.
+ */
+fun blockTitle(attributes: Map<String, Any>) = attributes[BlockAttribute.TITLE.key].toString()
+
 
 /**
  * Creates a context name without a leading colon.

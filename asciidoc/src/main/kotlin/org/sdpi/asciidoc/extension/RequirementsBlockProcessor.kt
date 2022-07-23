@@ -26,6 +26,7 @@ const val BLOCK_NAME_SDPI_REQUIREMENT = "sdpi_req"
 class RequirementsBlockProcessor : BlockProcessor(BLOCK_NAME_SDPI_REQUIREMENT) {
     private companion object : Logging {
         val REQUIREMENT_NUMBER_FORMAT = "^r(\\d+)$".toRegex()
+        val REQUIREMENT_TITLE_FORMAT = "^([A-Z])*?R(\\d+)$".toRegex()
     }
 
     private val detectedRequirements = mutableMapOf<Int, SdpiRequirement>()
@@ -41,12 +42,12 @@ class RequirementsBlockProcessor : BlockProcessor(BLOCK_NAME_SDPI_REQUIREMENT) {
         parent: StructuralNode, reader: Reader,
         attributes: Map<String, Any>
     ): Any = retrieveRequirement(reader, attributes).let { requirement ->
-        logger.info { "Found SDPi requirement: $requirement" }
+        logger.info { "Found SDPi requirement #{${requirement.number}: $requirement" }
         storeRequirement(requirement)
         createBlock(
             parent, plainContext(Contexts.SIDEBAR), mapOf(
                 Options.ATTRIBUTES to attributes, // copy attributes for further processing
-                ContentModel.KEY to ContentModel.COMPOUND // signify processing of a compound object
+                ContentModel.KEY to ContentModel.COMPOUND // signify construction of a compound object
             )
         ).also {
             // make sure to separately parse contents since reader was requested by retrieveRequirement()
@@ -67,11 +68,24 @@ class RequirementsBlockProcessor : BlockProcessor(BLOCK_NAME_SDPI_REQUIREMENT) {
     }
 
     private fun storeRequirement(requirement: SdpiRequirement) {
-        check(!detectedRequirements.containsKey(requirement.number)) {
-            "SDPi requirement R'${requirement.number}' already exists".also {
+        validateRequirement(requirement)
+        detectedRequirements[requirement.number] = requirement
+    }
+
+    private fun validateRequirement(requirement: SdpiRequirement) {
+        val reqNumberFromTitle = REQUIREMENT_TITLE_FORMAT.findAll(requirement.blockTitle)
+            .map { it.groupValues[2] }.toList().first().toInt()
+        check(reqNumberFromTitle == requirement.number) {
+            ("SDPi requirement title format is wrong or number differs from ID: " +
+                    "title=${requirement.blockTitle}, id=${requirement.blockId}").also {
                 logger.error { it }
             }
         }
-        detectedRequirements[requirement.number] = requirement
+
+        check(!detectedRequirements.containsKey(requirement.number)) {
+            "SDPi requirement #'${requirement.number}' already exists".also {
+                logger.error { it }
+            }
+        }
     }
 }
