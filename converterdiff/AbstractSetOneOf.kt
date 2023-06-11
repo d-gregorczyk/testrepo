@@ -10,12 +10,12 @@ import org.somda.protosdc.biceps.model.SetString
 import org.somda.protosdc.biceps.model.SetValue
 
 sealed class AbstractSetOneOf {
-    data class ChoiceAbstractSet(val value: AbstractSet) : AbstractSetOneOf()
-    data class ChoiceActivate(val value: Activate) : AbstractSetOneOf()
-    data class ChoiceSetAlertState(val value: SetAlertState) : AbstractSetOneOf()
-    data class ChoiceSetComponentState(val value: SetComponentState) : AbstractSetOneOf()
-    data class ChoiceSetContextState(val value: SetContextState) : AbstractSetOneOf()
-    data class ChoiceSetMetricState(val value: SetMetricState) : AbstractSetOneOf()
-    data class ChoiceSetString(val value: SetString) : AbstractSetOneOf()
-    data class ChoiceSetValue(val value: SetValue) : AbstractSetOneOf()
+    data class ChoiceAbstractSet(val Choice: AbstractSet) : AbstractSetOneOf()
+    data class ChoiceActivate(val Choice: Activate) : AbstractSetOneOf()
+    data class ChoiceSetAlertState(val Choice: SetAlertState) : AbstractSetOneOf()
+    data class ChoiceSetComponentState(val Choice: SetComponentState) : AbstractSetOneOf()
+    data class ChoiceSetContextState(val Choice: SetContextState) : AbstractSetOneOf()
+    data class ChoiceSetMetricState(val Choice: SetMetricState) : AbstractSetOneOf()
+    data class ChoiceSetString(val Choice: SetString) : AbstractSetOneOf()
+    data class ChoiceSetValue(val Choice: SetValue) : AbstractSetOneOf()
 }

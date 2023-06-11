@@ -1,10 +1,12 @@
 package org.somda.protosdc.biceps.model
 
 
-data class GenerationMode (
+data class GenerationMode(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        Real, Test, Demo
+        Real,
+        Test,
+        Demo,
     }
 }

@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.AlertConditionKind
 import org.somda.protosdc.biceps.model.AlertConditionPriority
 import kotlin.time.Duration
 
-data class AlertConditionDescriptor (
+data class AlertConditionDescriptor(
     val abstractAlertDescriptor: AbstractAlertDescriptor,
     val source: List<HandleRef> = listOf(),
     val causeInfo: List<CauseInfo> = listOf(),
@@ -17,18 +17,22 @@ data class AlertConditionDescriptor (
     val canEscalateAttr: CanEscalateAttr? = null,
     val canDeescalateAttr: CanDeescalateAttr? = null,
 ) {
-    data class CanEscalateAttr (
+    data class CanEscalateAttr(
         val enumType: EnumType,
     ) {
         enum class EnumType {
-            Lo, Me, Hi
+            Lo,
+            Me,
+            Hi,
         }
     }
-    data class CanDeescalateAttr (
+    data class CanDeescalateAttr(
         val enumType: EnumType,
     ) {
         enum class EnumType {
-            Me, Lo, None
+            Me,
+            Lo,
+            None,
         }
     }
 }

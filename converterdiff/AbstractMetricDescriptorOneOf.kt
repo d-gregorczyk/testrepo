@@ -8,10 +8,10 @@ import org.somda.protosdc.biceps.model.RealTimeSampleArrayMetricDescriptor
 import org.somda.protosdc.biceps.model.StringMetricDescriptor
 
 sealed class AbstractMetricDescriptorOneOf {
-    data class ChoiceAbstractMetricDescriptor(val value: AbstractMetricDescriptor) : AbstractMetricDescriptorOneOf()
-    data class ChoiceDistributionSampleArrayMetricDescriptor(val value: DistributionSampleArrayMetricDescriptor) : AbstractMetricDescriptorOneOf()
-    data class ChoiceEnumStringMetricDescriptor(val value: EnumStringMetricDescriptor) : AbstractMetricDescriptorOneOf()
-    data class ChoiceNumericMetricDescriptor(val value: NumericMetricDescriptor) : AbstractMetricDescriptorOneOf()
-    data class ChoiceRealTimeSampleArrayMetricDescriptor(val value: RealTimeSampleArrayMetricDescriptor) : AbstractMetricDescriptorOneOf()
-    data class ChoiceStringMetricDescriptor(val value: StringMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceAbstractMetricDescriptor(val Choice: AbstractMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceDistributionSampleArrayMetricDescriptor(val Choice: DistributionSampleArrayMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceEnumStringMetricDescriptor(val Choice: EnumStringMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceNumericMetricDescriptor(val Choice: NumericMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceRealTimeSampleArrayMetricDescriptor(val Choice: RealTimeSampleArrayMetricDescriptor) : AbstractMetricDescriptorOneOf()
+    data class ChoiceStringMetricDescriptor(val Choice: StringMetricDescriptor) : AbstractMetricDescriptorOneOf()
 }

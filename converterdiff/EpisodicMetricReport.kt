@@ -2,6 +2,6 @@ package org.somda.protosdc.biceps.model
 
 import org.somda.protosdc.biceps.model.AbstractMetricReport
 
-data class EpisodicMetricReport (
+data class EpisodicMetricReport(
     val abstractMetricReport: AbstractMetricReport,
 )

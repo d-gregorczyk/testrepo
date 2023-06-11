@@ -2,7 +2,7 @@ package org.somda.protosdc.biceps.model
 
 import org.somda.protosdc.biceps.model.Extension
 
-data class BaseDemographics (
+data class BaseDemographics(
     val extensionElement: Extension? = null,
     val givenname: String? = null,
     val middlename: List<String> = listOf(),

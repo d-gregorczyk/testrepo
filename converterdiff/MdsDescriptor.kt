@@ -11,7 +11,7 @@ import org.somda.protosdc.biceps.model.LocalizedText
 import java.time.LocalDateTime
 import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 
-data class MdsDescriptor (
+data class MdsDescriptor(
     val abstractComplexDeviceComponentDescriptor: AbstractComplexDeviceComponentDescriptor,
     val metaData: MetaData? = null,
     val systemContext: SystemContextDescriptor? = null,
@@ -20,7 +20,7 @@ data class MdsDescriptor (
     val approvedJurisdictions: ApprovedJurisdictions? = null,
     val vmd: List<VmdDescriptor> = listOf(),
 ) {
-    data class MetaData (
+    data class MetaData(
         val extensionElement: Extension? = null,
         val udi: List<Udi> = listOf(),
         val lotNumber: String? = null,
@@ -31,7 +31,7 @@ data class MdsDescriptor (
         val modelNumber: String? = null,
         val serialNumber: List<String> = listOf(),
     ) {
-        data class Udi (
+        data class Udi(
             val extensionElement: Extension? = null,
             val deviceIdentifier: String,
             val humanReadableForm: String,

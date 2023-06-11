@@ -6,11 +6,11 @@ import org.somda.protosdc.biceps.model.InvocationInfo
 import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 import org.somda.protosdc.biceps.model.HandleRef
 
-data class OperationInvokedReport (
+data class OperationInvokedReport(
     val abstractReport: AbstractReport,
     val reportPart: List<ReportPart> = listOf(),
 ) {
-    data class ReportPart (
+    data class ReportPart(
         val abstractReportPart: AbstractReportPart,
         val invocationInfo: InvocationInfo,
         val invocationSource: InstanceIdentifierOneOf,

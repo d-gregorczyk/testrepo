@@ -1,6 +1,6 @@
 package org.somda.protosdc.biceps.model
 
 
-data class LocalizedTextContent (
+data class LocalizedTextContent(
     val string: String,
 )

@@ -1,6 +1,6 @@
 package org.somda.protosdc.biceps.model
 
 
-data class SymbolicCodeName (
+data class SymbolicCodeName(
     val string: String,
 )

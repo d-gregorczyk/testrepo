@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.Timestamp
 import java.math.BigDecimal
 import org.somda.protosdc.biceps.model.TimeZone
 
-data class ClockState (
+data class ClockState(
     val abstractDeviceComponentState: AbstractDeviceComponentState,
     val activeSyncProtocol: CodedValue? = null,
     val referenceSource: List<String> = listOf(),

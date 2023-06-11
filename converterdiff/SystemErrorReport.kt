@@ -5,11 +5,11 @@ import org.somda.protosdc.biceps.model.AbstractReportPart
 import org.somda.protosdc.biceps.model.CodedValue
 import org.somda.protosdc.biceps.model.LocalizedText
 
-data class SystemErrorReport (
+data class SystemErrorReport(
     val abstractReport: AbstractReport,
     val reportPart: List<ReportPart> = listOf(),
 ) {
-    data class ReportPart (
+    data class ReportPart(
         val abstractReportPart: AbstractReportPart,
         val errorCode: CodedValue,
         val errorInfo: LocalizedText? = null,

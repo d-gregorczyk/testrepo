@@ -10,7 +10,7 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.Year
 
-data class PatientDemographicsCoreData (
+data class PatientDemographicsCoreData(
     val baseDemographics: BaseDemographics,
     val sex: Sex? = null,
     val patientType: PatientType? = null,
@@ -20,9 +20,9 @@ data class PatientDemographicsCoreData (
     val race: CodedValue? = null,
 ) {
     sealed class DateOfBirth {
-        data class ChoiceLocalDateTime(val value: LocalDateTime) : DateOfBirth()
-        data class ChoiceLocalDate(val value: LocalDate) : DateOfBirth()
-        data class ChoiceYearMonth(val value: YearMonth) : DateOfBirth()
-        data class ChoiceYear(val value: Year) : DateOfBirth()
+        data class ChoiceLocalDateTime(val Choice: LocalDateTime) : DateOfBirth()
+        data class ChoiceLocalDate(val Choice: LocalDate) : DateOfBirth()
+        data class ChoiceYearMonth(val Choice: YearMonth) : DateOfBirth()
+        data class ChoiceYear(val Choice: Year) : DateOfBirth()
     }
 }

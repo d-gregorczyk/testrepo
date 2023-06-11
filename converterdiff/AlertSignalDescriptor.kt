@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.HandleRef
 import org.somda.protosdc.biceps.model.AlertSignalManifestation
 import kotlin.time.Duration
 
-data class AlertSignalDescriptor (
+data class AlertSignalDescriptor(
     val abstractAlertDescriptor: AbstractAlertDescriptor,
     val conditionSignaledAttr: HandleRef? = null,
     val manifestationAttr: AlertSignalManifestation,

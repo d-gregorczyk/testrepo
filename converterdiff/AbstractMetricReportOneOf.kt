@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.EpisodicMetricReport
 import org.somda.protosdc.biceps.model.PeriodicMetricReport
 
 sealed class AbstractMetricReportOneOf {
-    data class ChoiceAbstractMetricReport(val value: AbstractMetricReport) : AbstractMetricReportOneOf()
-    data class ChoiceEpisodicMetricReport(val value: EpisodicMetricReport) : AbstractMetricReportOneOf()
-    data class ChoicePeriodicMetricReport(val value: PeriodicMetricReport) : AbstractMetricReportOneOf()
+    data class ChoiceAbstractMetricReport(val Choice: AbstractMetricReport) : AbstractMetricReportOneOf()
+    data class ChoiceEpisodicMetricReport(val Choice: EpisodicMetricReport) : AbstractMetricReportOneOf()
+    data class ChoicePeriodicMetricReport(val Choice: PeriodicMetricReport) : AbstractMetricReportOneOf()
 }

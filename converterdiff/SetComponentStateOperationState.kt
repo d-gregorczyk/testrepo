@@ -2,6 +2,6 @@ package org.somda.protosdc.biceps.model
 
 import org.somda.protosdc.biceps.model.AbstractOperationState
 
-data class SetComponentStateOperationState (
+data class SetComponentStateOperationState(
     val abstractOperationState: AbstractOperationState,
 )

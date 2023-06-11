@@ -5,11 +5,11 @@ import org.somda.protosdc.biceps.model.CodedValue
 import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 import org.somda.protosdc.biceps.model.Measurement
 
-data class EnumStringMetricDescriptor (
+data class EnumStringMetricDescriptor(
     val stringMetricDescriptor: StringMetricDescriptor,
     val allowedValue: List<AllowedValue> = listOf(),
 ) {
-    data class AllowedValue (
+    data class AllowedValue(
         val value: String,
         val type: CodedValue? = null,
         val identification: InstanceIdentifierOneOf? = null,

@@ -8,10 +8,10 @@ import org.somda.protosdc.biceps.model.RealTimeSampleArrayMetricState
 import org.somda.protosdc.biceps.model.StringMetricState
 
 sealed class AbstractMetricStateOneOf {
-    data class ChoiceAbstractMetricState(val value: AbstractMetricState) : AbstractMetricStateOneOf()
-    data class ChoiceDistributionSampleArrayMetricState(val value: DistributionSampleArrayMetricState) : AbstractMetricStateOneOf()
-    data class ChoiceEnumStringMetricState(val value: EnumStringMetricState) : AbstractMetricStateOneOf()
-    data class ChoiceNumericMetricState(val value: NumericMetricState) : AbstractMetricStateOneOf()
-    data class ChoiceRealTimeSampleArrayMetricState(val value: RealTimeSampleArrayMetricState) : AbstractMetricStateOneOf()
-    data class ChoiceStringMetricState(val value: StringMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceAbstractMetricState(val Choice: AbstractMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceDistributionSampleArrayMetricState(val Choice: DistributionSampleArrayMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceEnumStringMetricState(val Choice: EnumStringMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceNumericMetricState(val Choice: NumericMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceRealTimeSampleArrayMetricState(val Choice: RealTimeSampleArrayMetricState) : AbstractMetricStateOneOf()
+    data class ChoiceStringMetricState(val Choice: StringMetricState) : AbstractMetricStateOneOf()
 }

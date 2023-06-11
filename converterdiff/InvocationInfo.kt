@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.InvocationState
 import org.somda.protosdc.biceps.model.InvocationError
 import org.somda.protosdc.biceps.model.LocalizedText
 
-data class InvocationInfo (
+data class InvocationInfo(
     val extensionElement: Extension? = null,
     val transactionId: TransactionId,
     val invocationState: InvocationState,

@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.VersionFrame
 import org.somda.protosdc.biceps.model.TimeFrame
 import org.somda.protosdc.biceps.model.HandleRef
 
-data class GetStatesFromArchive (
+data class GetStatesFromArchive(
     val abstractGet: AbstractGet,
     val stateRevisions: VersionFrame? = null,
     val timeFrame: TimeFrame? = null,

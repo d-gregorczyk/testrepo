@@ -1,10 +1,13 @@
 package org.somda.protosdc.biceps.model
 
 
-data class ContextAssociation (
+data class ContextAssociation(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        No, Pre, Assoc, Dis
+        No,
+        Pre,
+        Assoc,
+        Dis,
     }
 }

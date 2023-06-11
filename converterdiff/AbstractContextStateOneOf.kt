@@ -9,11 +9,11 @@ import org.somda.protosdc.biceps.model.PatientContextState
 import org.somda.protosdc.biceps.model.WorkflowContextState
 
 sealed class AbstractContextStateOneOf {
-    data class ChoiceAbstractContextState(val value: AbstractContextState) : AbstractContextStateOneOf()
-    data class ChoiceEnsembleContextState(val value: EnsembleContextState) : AbstractContextStateOneOf()
-    data class ChoiceLocationContextState(val value: LocationContextState) : AbstractContextStateOneOf()
-    data class ChoiceMeansContextState(val value: MeansContextState) : AbstractContextStateOneOf()
-    data class ChoiceOperatorContextState(val value: OperatorContextState) : AbstractContextStateOneOf()
-    data class ChoicePatientContextState(val value: PatientContextState) : AbstractContextStateOneOf()
-    data class ChoiceWorkflowContextState(val value: WorkflowContextState) : AbstractContextStateOneOf()
+    data class ChoiceAbstractContextState(val Choice: AbstractContextState) : AbstractContextStateOneOf()
+    data class ChoiceEnsembleContextState(val Choice: EnsembleContextState) : AbstractContextStateOneOf()
+    data class ChoiceLocationContextState(val Choice: LocationContextState) : AbstractContextStateOneOf()
+    data class ChoiceMeansContextState(val Choice: MeansContextState) : AbstractContextStateOneOf()
+    data class ChoiceOperatorContextState(val Choice: OperatorContextState) : AbstractContextStateOneOf()
+    data class ChoicePatientContextState(val Choice: PatientContextState) : AbstractContextStateOneOf()
+    data class ChoiceWorkflowContextState(val Choice: WorkflowContextState) : AbstractContextStateOneOf()
 }

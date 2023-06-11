@@ -4,6 +4,6 @@ import org.somda.protosdc.biceps.model.PersonReference
 import org.somda.protosdc.biceps.model.PersonParticipation
 
 sealed class PersonReferenceOneOf {
-    data class ChoicePersonReference(val value: PersonReference) : PersonReferenceOneOf()
-    data class ChoicePersonParticipation(val value: PersonParticipation) : PersonReferenceOneOf()
+    data class ChoicePersonReference(val Choice: PersonReference) : PersonReferenceOneOf()
+    data class ChoicePersonParticipation(val Choice: PersonParticipation) : PersonReferenceOneOf()
 }

@@ -11,13 +11,13 @@ import org.somda.protosdc.biceps.model.SetStringOperationDescriptor
 import org.somda.protosdc.biceps.model.SetValueOperationDescriptor
 
 sealed class AbstractOperationDescriptorOneOf {
-    data class ChoiceAbstractOperationDescriptor(val value: AbstractOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceAbstractSetStateOperationDescriptor(val value: AbstractSetStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceActivateOperationDescriptor(val value: ActivateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetAlertStateOperationDescriptor(val value: SetAlertStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetComponentStateOperationDescriptor(val value: SetComponentStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetContextStateOperationDescriptor(val value: SetContextStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetMetricStateOperationDescriptor(val value: SetMetricStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetStringOperationDescriptor(val value: SetStringOperationDescriptor) : AbstractOperationDescriptorOneOf()
-    data class ChoiceSetValueOperationDescriptor(val value: SetValueOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceAbstractOperationDescriptor(val Choice: AbstractOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceAbstractSetStateOperationDescriptor(val Choice: AbstractSetStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceActivateOperationDescriptor(val Choice: ActivateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetAlertStateOperationDescriptor(val Choice: SetAlertStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetComponentStateOperationDescriptor(val Choice: SetComponentStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetContextStateOperationDescriptor(val Choice: SetContextStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetMetricStateOperationDescriptor(val Choice: SetMetricStateOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetStringOperationDescriptor(val Choice: SetStringOperationDescriptor) : AbstractOperationDescriptorOneOf()
+    data class ChoiceSetValueOperationDescriptor(val Choice: SetValueOperationDescriptor) : AbstractOperationDescriptorOneOf()
 }

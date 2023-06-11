@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.GenerationMode
 import org.somda.protosdc.biceps.model.QualityIndicator
 import org.somda.protosdc.biceps.model.CodedValue
 
-data class AbstractMetricValue (
+data class AbstractMetricValue(
     val extensionElement: Extension? = null,
     val metricQuality: MetricQuality,
     val annotation: List<Annotation> = listOf(),
@@ -15,13 +15,13 @@ data class AbstractMetricValue (
     val stopTimeAttr: Timestamp? = null,
     val determinationTimeAttr: Timestamp? = null,
 ) {
-    data class MetricQuality (
+    data class MetricQuality(
         val extensionElement: Extension? = null,
         val validityAttr: MeasurementValidity,
         val modeAttr: GenerationMode? = null,
         val qiAttr: QualityIndicator? = null,
     )
-    data class Annotation (
+    data class Annotation(
         val extensionElement: Extension? = null,
         val type: CodedValue,
     )

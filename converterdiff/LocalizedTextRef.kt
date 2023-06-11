@@ -1,6 +1,6 @@
 package org.somda.protosdc.biceps.model
 
 
-data class LocalizedTextRef (
+data class LocalizedTextRef(
     val string: String,
 )
