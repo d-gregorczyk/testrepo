@@ -1,10 +1,13 @@
 package org.somda.protosdc.biceps.model
 
 
-data class CalibrationType (
+data class CalibrationType(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        Offset, Gain, TP, Unspec
+        Offset,
+        Gain,
+        TP,
+        Unspec,
     }
 }

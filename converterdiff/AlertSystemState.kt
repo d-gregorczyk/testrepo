@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.SystemSignalActivation
 import org.somda.protosdc.biceps.model.Timestamp
 import org.somda.protosdc.biceps.model.AlertConditionReference
 
-data class AlertSystemState (
+data class AlertSystemState(
     val abstractAlertState: AbstractAlertState,
     val systemSignalActivation: List<SystemSignalActivation> = listOf(),
     val lastSelfCheckAttr: Timestamp? = null,

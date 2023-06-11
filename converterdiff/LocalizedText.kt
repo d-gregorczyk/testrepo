@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.LocalizedTextRef
 import org.somda.protosdc.biceps.model.ReferencedVersion
 import org.somda.protosdc.biceps.model.LocalizedTextWidth
 
-data class LocalizedText (
+data class LocalizedText(
     val localizedTextContent: LocalizedTextContent,
     val refAttr: LocalizedTextRef? = null,
     val langAttr: String? = null,

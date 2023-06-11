@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.Measurement
 import org.somda.protosdc.biceps.model.MeasurementValidity
 import org.somda.protosdc.biceps.model.Range
 
-data class ClinicalInfo (
+data class ClinicalInfo(
     val extensionElement: Extension? = null,
     val type: CodedValue? = null,
     val code: CodedValue? = null,
@@ -15,19 +15,20 @@ data class ClinicalInfo (
     val description: List<LocalizedText> = listOf(),
     val relatedMeasurement: List<RelatedMeasurement> = listOf(),
 ) {
-    data class Criticality (
+    data class Criticality(
         val enumType: EnumType,
     ) {
         enum class EnumType {
-            Lo, Hi
+            Lo,
+            Hi,
         }
     }
-    data class RelatedMeasurement (
+    data class RelatedMeasurement(
         val value: Measurement,
         val referenceRange: List<ReferenceRange> = listOf(),
         val validityAttr: MeasurementValidity? = null,
     ) {
-        data class ReferenceRange (
+        data class ReferenceRange(
             val range: Range,
             val meaning: CodedValue? = null,
         )

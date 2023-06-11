@@ -9,11 +9,11 @@ import org.somda.protosdc.biceps.model.CodedValue
 import org.somda.protosdc.biceps.model.ClinicalInfo
 import org.somda.protosdc.biceps.model.OrderDetail
 
-data class WorkflowContextState (
+data class WorkflowContextState(
     val abstractContextState: AbstractContextState,
     val workflowDetail: WorkflowDetail? = null,
 ) {
-    data class WorkflowDetail (
+    data class WorkflowDetail(
         val extensionElement: Extension? = null,
         val patient: PersonReferenceOneOf,
         val assignedLocation: LocationReference? = null,
@@ -23,13 +23,13 @@ data class WorkflowContextState (
         val requestedOrderDetail: RequestedOrderDetail? = null,
         val performedOrderDetail: PerformedOrderDetail? = null,
     ) {
-        data class RequestedOrderDetail (
+        data class RequestedOrderDetail(
             val orderDetail: OrderDetail,
             val referringPhysician: PersonReferenceOneOf? = null,
             val requestingPhysician: PersonReferenceOneOf? = null,
             val placerOrderNumber: InstanceIdentifierOneOf,
         )
-        data class PerformedOrderDetail (
+        data class PerformedOrderDetail(
             val orderDetail: OrderDetail,
             val fillerOrderNumber: InstanceIdentifierOneOf? = null,
             val resultingClinicalInfo: List<ClinicalInfo> = listOf(),

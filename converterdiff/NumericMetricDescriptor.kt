@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.Range
 import java.math.BigDecimal
 import kotlin.time.Duration
 
-data class NumericMetricDescriptor (
+data class NumericMetricDescriptor(
     val abstractMetricDescriptor: AbstractMetricDescriptor,
     val technicalRange: List<Range> = listOf(),
     val resolutionAttr: BigDecimal,

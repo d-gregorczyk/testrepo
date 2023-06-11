@@ -10,7 +10,7 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.Year
 
-data class PatientDemographicsCoreData (
+data class PatientDemographicsCoreData(
     val baseDemographics: BaseDemographics,
     val sex: Sex? = null,
     val patientType: PatientType? = null,

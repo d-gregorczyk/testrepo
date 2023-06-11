@@ -4,7 +4,7 @@ import org.somda.protosdc.biceps.model.AbstractComplexDeviceComponentState
 import org.somda.protosdc.biceps.model.OperatingJurisdiction
 import org.somda.protosdc.biceps.model.MdsOperatingMode
 
-data class MdsState (
+data class MdsState(
     val abstractComplexDeviceComponentState: AbstractComplexDeviceComponentState,
     val operatingJurisdiction: OperatingJurisdiction? = null,
     val langAttr: String? = null,

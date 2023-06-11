@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.Handle
 import org.somda.protosdc.biceps.model.VersionCounter
 import org.somda.protosdc.biceps.model.SafetyClassification
 
-data class AbstractDescriptor (
+data class AbstractDescriptor(
     val extensionElement: Extension? = null,
     val type: CodedValue? = null,
     val handleAttr: Handle,

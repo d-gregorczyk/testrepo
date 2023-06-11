@@ -3,7 +3,7 @@ package org.somda.protosdc.biceps.model
 import org.somda.protosdc.biceps.model.Extension
 import java.math.BigDecimal
 
-data class Range (
+data class Range(
     val extensionElement: Extension? = null,
     val lowerAttr: BigDecimal? = null,
     val upperAttr: BigDecimal? = null,

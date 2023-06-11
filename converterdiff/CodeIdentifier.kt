@@ -1,6 +1,6 @@
 package org.somda.protosdc.biceps.model
 
 
-data class CodeIdentifier (
+data class CodeIdentifier(
     val string: String,
 )

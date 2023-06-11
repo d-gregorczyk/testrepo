@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.CalibrationInfo
 import org.somda.protosdc.biceps.model.PhysicalConnectorInfo
 import org.somda.protosdc.biceps.model.ComponentActivation
 
-data class AbstractDeviceComponentState (
+data class AbstractDeviceComponentState(
     val abstractState: AbstractState,
     val calibrationInfo: CalibrationInfo? = null,
     val nextCalibration: CalibrationInfo? = null,

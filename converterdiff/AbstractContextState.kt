@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.ContextAssociation
 import org.somda.protosdc.biceps.model.ReferencedVersion
 import org.somda.protosdc.biceps.model.Timestamp
 
-data class AbstractContextState (
+data class AbstractContextState(
     val abstractMultiState: AbstractMultiState,
     val validator: List<InstanceIdentifierOneOf> = listOf(),
     val identification: List<InstanceIdentifierOneOf> = listOf(),

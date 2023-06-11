@@ -1,10 +1,15 @@
 package org.somda.protosdc.biceps.model
 
 
-data class ComponentActivation (
+data class ComponentActivation(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        On, NotRdy, StndBy, Off, Shtdn, Fail
+        On,
+        NotRdy,
+        StndBy,
+        Off,
+        Shtdn,
+        Fail,
     }
 }

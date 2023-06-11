@@ -3,7 +3,7 @@ package org.somda.protosdc.biceps.model
 import org.somda.protosdc.biceps.model.AbstractDeviceComponentState
 import org.somda.protosdc.biceps.model.Measurement
 
-data class BatteryState (
+data class BatteryState(
     val abstractDeviceComponentState: AbstractDeviceComponentState,
     val capacityRemaining: Measurement? = null,
     val voltage: Measurement? = null,
@@ -13,11 +13,14 @@ data class BatteryState (
     val chargeStatusAttr: ChargeStatusAttr? = null,
     val chargeCyclesAttr: Int? = null,
 ) {
-    data class ChargeStatusAttr (
+    data class ChargeStatusAttr(
         val enumType: EnumType,
     ) {
         enum class EnumType {
-            Ful, ChB, DisChB, DEB
+            Ful,
+            ChB,
+            DisChB,
+            DEB,
         }
     }
 }

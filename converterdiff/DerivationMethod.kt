@@ -1,10 +1,11 @@
 package org.somda.protosdc.biceps.model
 
 
-data class DerivationMethod (
+data class DerivationMethod(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        Auto, Man
+        Auto,
+        Man,
     }
 }

@@ -8,7 +8,7 @@ import org.somda.protosdc.biceps.model.OperatorContextDescriptor
 import org.somda.protosdc.biceps.model.WorkflowContextDescriptor
 import org.somda.protosdc.biceps.model.MeansContextDescriptor
 
-data class SystemContextDescriptor (
+data class SystemContextDescriptor(
     val abstractDeviceComponentDescriptor: AbstractDeviceComponentDescriptor,
     val patientContext: PatientContextDescriptor? = null,
     val locationContext: LocationContextDescriptor? = null,

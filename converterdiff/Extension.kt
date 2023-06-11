@@ -1,10 +1,10 @@
 package org.somda.protosdc.biceps.model
 
 
-data class Extension (
+data class Extension(
     val item: List<Item> = listOf(),
 ) {
-    data class Item (
+    data class Item(
         val mustUnderstand: Boolean,
         val extensionData: Any,
     )

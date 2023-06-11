@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.Range
 import org.somda.protosdc.biceps.model.AlertConditionMonitoredLimits
 import org.somda.protosdc.biceps.model.AlertActivation
 
-data class LimitAlertConditionState (
+data class LimitAlertConditionState(
     val alertConditionState: AlertConditionState,
     val limits: Range,
     val monitoredAlertLimitsAttr: AlertConditionMonitoredLimits,

@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.PersonParticipation
 import org.somda.protosdc.biceps.model.CodedValue
 import org.somda.protosdc.biceps.model.ImagingProcedure
 
-data class OrderDetail (
+data class OrderDetail(
     val extensionElement: Extension? = null,
     val start: LocalDateTime? = null,
     val end: LocalDateTime? = null,

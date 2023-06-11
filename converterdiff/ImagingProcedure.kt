@@ -4,7 +4,7 @@ import org.somda.protosdc.biceps.model.Extension
 import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 import org.somda.protosdc.biceps.model.CodedValue
 
-data class ImagingProcedure (
+data class ImagingProcedure(
     val extensionElement: Extension? = null,
     val accessionIdentifier: InstanceIdentifierOneOf,
     val requestedProcedureId: InstanceIdentifierOneOf,

@@ -1,10 +1,13 @@
 package org.somda.protosdc.biceps.model
 
 
-data class AlertConditionPriority (
+data class AlertConditionPriority(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        Lo, Me, Hi, None
+        Lo,
+        Me,
+        Hi,
+        None,
     }
 }

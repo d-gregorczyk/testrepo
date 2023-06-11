@@ -5,7 +5,7 @@ import kotlin.time.Duration
 import org.somda.protosdc.biceps.model.AlertConditionPriority
 import org.somda.protosdc.biceps.model.Timestamp
 
-data class AlertConditionState (
+data class AlertConditionState(
     val abstractAlertState: AbstractAlertState,
     val actualConditionGenerationDelayAttr: Duration? = null,
     val actualPriorityAttr: AlertConditionPriority? = null,

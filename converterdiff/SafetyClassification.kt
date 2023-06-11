@@ -1,10 +1,13 @@
 package org.somda.protosdc.biceps.model
 
 
-data class SafetyClassification (
+data class SafetyClassification(
     val enumType: EnumType,
 ) {
     enum class EnumType {
-        Inf, MedA, MedB, MedC
+        Inf,
+        MedA,
+        MedB,
+        MedC,
     }
 }

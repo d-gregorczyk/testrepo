@@ -10,7 +10,7 @@ import org.somda.protosdc.biceps.model.Extension
 import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 import org.somda.protosdc.biceps.model.EntryRef
 
-data class AbstractMetricDescriptor (
+data class AbstractMetricDescriptor(
     val abstractDescriptor: AbstractDescriptor,
     val unit: CodedValue,
     val bodySite: List<CodedValue> = listOf(),
@@ -24,18 +24,23 @@ data class AbstractMetricDescriptor (
     val lifeTimePeriodAttr: Duration? = null,
     val activationDurationAttr: Duration? = null,
 ) {
-    data class Relation (
+    data class Relation(
         val extensionElement: Extension? = null,
         val code: CodedValue? = null,
         val identification: InstanceIdentifierOneOf? = null,
         val kindAttr: KindAttr,
         val entriesAttr: EntryRef,
     ) {
-        data class KindAttr (
+        data class KindAttr(
             val enumType: EnumType,
         ) {
             enum class EnumType {
-                Rcm, PS, SST, ECE, DCE, Oth
+                Rcm,
+                PS,
+                SST,
+                ECE,
+                DCE,
+                Oth,
             }
         }
     }
