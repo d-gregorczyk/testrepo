@@ -7,9 +7,9 @@ import org.somda.protosdc.biceps.model.AlertSystemDescriptor
 import org.somda.protosdc.biceps.model.LimitAlertConditionDescriptor
 
 sealed class AbstractAlertDescriptorOneOf {
-    data class ChoiceAbstractAlertDescriptor(val Choice: AbstractAlertDescriptor) : AbstractAlertDescriptorOneOf()
-    data class ChoiceAlertConditionDescriptor(val Choice: AlertConditionDescriptor) : AbstractAlertDescriptorOneOf()
-    data class ChoiceAlertSignalDescriptor(val Choice: AlertSignalDescriptor) : AbstractAlertDescriptorOneOf()
-    data class ChoiceAlertSystemDescriptor(val Choice: AlertSystemDescriptor) : AbstractAlertDescriptorOneOf()
-    data class ChoiceLimitAlertConditionDescriptor(val Choice: LimitAlertConditionDescriptor) : AbstractAlertDescriptorOneOf()
+    data class ChoiceAbstractAlertDescriptor(val value: AbstractAlertDescriptor) : AbstractAlertDescriptorOneOf()
+    data class ChoiceAlertConditionDescriptor(val value: AlertConditionDescriptor) : AbstractAlertDescriptorOneOf()
+    data class ChoiceAlertSignalDescriptor(val value: AlertSignalDescriptor) : AbstractAlertDescriptorOneOf()
+    data class ChoiceAlertSystemDescriptor(val value: AlertSystemDescriptor) : AbstractAlertDescriptorOneOf()
+    data class ChoiceLimitAlertConditionDescriptor(val value: LimitAlertConditionDescriptor) : AbstractAlertDescriptorOneOf()
 }

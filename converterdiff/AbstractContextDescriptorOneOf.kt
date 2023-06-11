@@ -9,11 +9,11 @@ import org.somda.protosdc.biceps.model.PatientContextDescriptor
 import org.somda.protosdc.biceps.model.WorkflowContextDescriptor
 
 sealed class AbstractContextDescriptorOneOf {
-    data class ChoiceAbstractContextDescriptor(val Choice: AbstractContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoiceEnsembleContextDescriptor(val Choice: EnsembleContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoiceLocationContextDescriptor(val Choice: LocationContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoiceMeansContextDescriptor(val Choice: MeansContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoiceOperatorContextDescriptor(val Choice: OperatorContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoicePatientContextDescriptor(val Choice: PatientContextDescriptor) : AbstractContextDescriptorOneOf()
-    data class ChoiceWorkflowContextDescriptor(val Choice: WorkflowContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceAbstractContextDescriptor(val value: AbstractContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceEnsembleContextDescriptor(val value: EnsembleContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceLocationContextDescriptor(val value: LocationContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceMeansContextDescriptor(val value: MeansContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceOperatorContextDescriptor(val value: OperatorContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoicePatientContextDescriptor(val value: PatientContextDescriptor) : AbstractContextDescriptorOneOf()
+    data class ChoiceWorkflowContextDescriptor(val value: WorkflowContextDescriptor) : AbstractContextDescriptorOneOf()
 }

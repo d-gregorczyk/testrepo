@@ -20,9 +20,9 @@ data class PatientDemographicsCoreData(
     val race: CodedValue? = null,
 ) {
     sealed class DateOfBirth {
-        data class ChoiceLocalDateTime(val Choice: LocalDateTime) : DateOfBirth()
-        data class ChoiceLocalDate(val Choice: LocalDate) : DateOfBirth()
-        data class ChoiceYearMonth(val Choice: YearMonth) : DateOfBirth()
-        data class ChoiceYear(val Choice: Year) : DateOfBirth()
+        data class ChoiceLocalDateTime(val value: LocalDateTime) : DateOfBirth()
+        data class ChoiceLocalDate(val value: LocalDate) : DateOfBirth()
+        data class ChoiceYearMonth(val value: YearMonth) : DateOfBirth()
+        data class ChoiceYear(val value: Year) : DateOfBirth()
     }
 }
