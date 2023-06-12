@@ -14,20 +14,18 @@ import org.somda.protosdc.biceps.model.GetMdibResponse
 import org.somda.protosdc.biceps.model.GetStatesFromArchiveResponse
 import org.somda.protosdc.biceps.model.GetSupportedLanguagesResponse
 
-data class AbstractGetResponseOneOf(
-    sealed class AbstractGetResponseOneOf {
-        data class ChoiceAbstractGetResponse(val value: AbstractGetResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetContainmentTreeResponse(val value: GetContainmentTreeResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetContextStatesByFilterResponse(val value: GetContextStatesByFilterResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetContextStatesByIdentificationResponse(val value: GetContextStatesByIdentificationResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetContextStatesResponse(val value: GetContextStatesResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetDescriptorResponse(val value: GetDescriptorResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetDescriptorsFromArchiveResponse(val value: GetDescriptorsFromArchiveResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetLocalizedTextResponse(val value: GetLocalizedTextResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetMdDescriptionResponse(val value: GetMdDescriptionResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetMdStateResponse(val value: GetMdStateResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetMdibResponse(val value: GetMdibResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetStatesFromArchiveResponse(val value: GetStatesFromArchiveResponse) : AbstractGetResponseOneOf()
-        data class ChoiceGetSupportedLanguagesResponse(val value: GetSupportedLanguagesResponse) : AbstractGetResponseOneOf()
-    }
-)
+sealed class AbstractGetResponseOneOf {
+    data class ChoiceAbstractGetResponse(val value: AbstractGetResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetContainmentTreeResponse(val value: GetContainmentTreeResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetContextStatesByFilterResponse(val value: GetContextStatesByFilterResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetContextStatesByIdentificationResponse(val value: GetContextStatesByIdentificationResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetContextStatesResponse(val value: GetContextStatesResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetDescriptorResponse(val value: GetDescriptorResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetDescriptorsFromArchiveResponse(val value: GetDescriptorsFromArchiveResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetLocalizedTextResponse(val value: GetLocalizedTextResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetMdDescriptionResponse(val value: GetMdDescriptionResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetMdStateResponse(val value: GetMdStateResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetMdibResponse(val value: GetMdibResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetStatesFromArchiveResponse(val value: GetStatesFromArchiveResponse) : AbstractGetResponseOneOf()
+    data class ChoiceGetSupportedLanguagesResponse(val value: GetSupportedLanguagesResponse) : AbstractGetResponseOneOf()
+}

@@ -2,6 +2,8 @@ package org.somda.protosdc.biceps.model
 
 
 data class MetricCategory(
+    val enumType: EnumType,
+) {
     enum class EnumType {
         Unspec,
         Msrmt,
@@ -10,5 +12,4 @@ data class MetricCategory(
         Preset,
         Rcmm,
     }
-    val enumType: EnumType,
-)
+}

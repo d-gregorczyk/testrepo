@@ -7,10 +7,11 @@ import org.somda.protosdc.biceps.model.VersionCounter
 
 data class ObservedValueStream(
     val abstractReport: AbstractReport,
+    val value: List<Value> = listOf(),
+) {
     data class Value(
         val value: SampleArrayValue? = null,
         val metricAttr: HandleRef,
         val stateVersionAttr: VersionCounter? = null,
     )
-    val value: List<Value> = listOf(),
-)
+}

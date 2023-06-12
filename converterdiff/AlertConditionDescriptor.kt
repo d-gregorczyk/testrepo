@@ -14,22 +14,25 @@ data class AlertConditionDescriptor(
     val kindAttr: AlertConditionKind,
     val priorityAttr: AlertConditionPriority,
     val defaultConditionGenerationDelayAttr: Duration? = null,
+    val canEscalateAttr: CanEscalateAttr? = null,
+    val canDeescalateAttr: CanDeescalateAttr? = null,
+) {
     data class CanEscalateAttr(
+        val enumType: EnumType,
+    ) {
         enum class EnumType {
             Lo,
             Me,
             Hi,
         }
-        val enumType: EnumType,
-    )
-    val canEscalateAttr: CanEscalateAttr? = null,
+    }
     data class CanDeescalateAttr(
+        val enumType: EnumType,
+    ) {
         enum class EnumType {
             Me,
             Lo,
             None,
         }
-        val enumType: EnumType,
-    )
-    val canDeescalateAttr: CanDeescalateAttr? = null,
-)
+    }
+}

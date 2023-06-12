@@ -14,16 +14,15 @@ data class PatientDemographicsCoreData(
     val baseDemographics: BaseDemographics,
     val sex: Sex? = null,
     val patientType: PatientType? = null,
-    data class DateOfBirth(
-        sealed class DateOfBirth {
-            data class ChoiceLocalDateTime(val value: LocalDateTime) : DateOfBirth()
-            data class ChoiceLocalDate(val value: LocalDate) : DateOfBirth()
-            data class ChoiceYearMonth(val value: YearMonth) : DateOfBirth()
-            data class ChoiceYear(val value: Year) : DateOfBirth()
-        }
-    )
     val dateOfBirth: DateOfBirth? = null,
     val height: Measurement? = null,
     val weight: Measurement? = null,
     val race: CodedValue? = null,
-)
+) {
+    sealed class DateOfBirth {
+        data class ChoiceLocalDateTime(val value: LocalDateTime) : DateOfBirth()
+        data class ChoiceLocalDate(val value: LocalDate) : DateOfBirth()
+        data class ChoiceYearMonth(val value: YearMonth) : DateOfBirth()
+        data class ChoiceYear(val value: Year) : DateOfBirth()
+    }
+}

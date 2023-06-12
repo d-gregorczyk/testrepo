@@ -10,15 +10,17 @@ data class BatteryState(
     val current: Measurement? = null,
     val temperature: Measurement? = null,
     val remainingBatteryTime: Measurement? = null,
+    val chargeStatusAttr: ChargeStatusAttr? = null,
+    val chargeCyclesAttr: Int? = null,
+) {
     data class ChargeStatusAttr(
+        val enumType: EnumType,
+    ) {
         enum class EnumType {
             Ful,
             ChB,
             DisChB,
             DEB,
         }
-        val enumType: EnumType,
-    )
-    val chargeStatusAttr: ChargeStatusAttr? = null,
-    val chargeCyclesAttr: Int? = null,
-)
+    }
+}

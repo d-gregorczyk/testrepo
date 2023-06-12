@@ -10,7 +10,11 @@ data class AbstractOperationDescriptor(
     val maxTimeToFinishAttr: Duration? = null,
     val invocationEffectiveTimeoutAttr: Duration? = null,
     val retriggerableAttr: Boolean? = null,
+    val accessLevelAttr: AccessLevelAttr? = null,
+) {
     data class AccessLevelAttr(
+        val enumType: EnumType,
+    ) {
         enum class EnumType {
             Usr,
             CSUsr,
@@ -18,7 +22,5 @@ data class AbstractOperationDescriptor(
             SP,
             Oth,
         }
-        val enumType: EnumType,
-    )
-    val accessLevelAttr: AccessLevelAttr? = null,
-)
+    }
+}
