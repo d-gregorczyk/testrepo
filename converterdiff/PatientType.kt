@@ -2,8 +2,6 @@ package org.somda.protosdc.biceps.model
 
 
 data class PatientType(
-    val enumType: EnumType,
-) {
     enum class EnumType {
         Unspec,
         Ad,
@@ -13,4 +11,5 @@ data class PatientType(
         Neo,
         Oth,
     }
-}
+    val enumType: EnumType,
+)

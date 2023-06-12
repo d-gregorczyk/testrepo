@@ -14,6 +14,24 @@ data class AbstractMetricDescriptor(
     val abstractDescriptor: AbstractDescriptor,
     val unit: CodedValue,
     val bodySite: List<CodedValue> = listOf(),
+    data class Relation(
+        val extensionElement: Extension? = null,
+        val code: CodedValue? = null,
+        val identification: InstanceIdentifierOneOf? = null,
+        data class KindAttr(
+            enum class EnumType {
+                Rcm,
+                PS,
+                SST,
+                ECE,
+                DCE,
+                Oth,
+            }
+            val enumType: EnumType,
+        )
+        val kindAttr: KindAttr,
+        val entriesAttr: EntryRef,
+    )
     val relation: List<Relation> = listOf(),
     val metricCategoryAttr: MetricCategory,
     val derivationMethodAttr: DerivationMethod? = null,
@@ -23,25 +41,4 @@ data class AbstractMetricDescriptor(
     val determinationPeriodAttr: Duration? = null,
     val lifeTimePeriodAttr: Duration? = null,
     val activationDurationAttr: Duration? = null,
-) {
-    data class Relation(
-        val extensionElement: Extension? = null,
-        val code: CodedValue? = null,
-        val identification: InstanceIdentifierOneOf? = null,
-        val kindAttr: KindAttr,
-        val entriesAttr: EntryRef,
-    ) {
-        data class KindAttr(
-            val enumType: EnumType,
-        ) {
-            enum class EnumType {
-                Rcm,
-                PS,
-                SST,
-                ECE,
-                DCE,
-                Oth,
-            }
-        }
-    }
-}
+)

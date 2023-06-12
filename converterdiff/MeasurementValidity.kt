@@ -2,8 +2,6 @@ package org.somda.protosdc.biceps.model
 
 
 data class MeasurementValidity(
-    val enumType: EnumType,
-) {
     enum class EnumType {
         Vld,
         Vldated,
@@ -15,4 +13,5 @@ data class MeasurementValidity(
         Uflw,
         NA,
     }
-}
+    val enumType: EnumType,
+)

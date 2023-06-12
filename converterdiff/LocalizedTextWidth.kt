@@ -2,8 +2,6 @@ package org.somda.protosdc.biceps.model
 
 
 data class LocalizedTextWidth(
-    val enumType: EnumType,
-) {
     enum class EnumType {
         xs,
         s,
@@ -12,4 +10,5 @@ data class LocalizedTextWidth(
         xl,
         xxl,
     }
-}
+    val enumType: EnumType,
+)

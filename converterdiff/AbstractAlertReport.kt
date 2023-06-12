@@ -6,10 +6,9 @@ import org.somda.protosdc.biceps.model.AbstractAlertStateOneOf
 
 data class AbstractAlertReport(
     val abstractReport: AbstractReport,
-    val reportPart: List<ReportPart> = listOf(),
-) {
     data class ReportPart(
         val abstractReportPart: AbstractReportPart,
         val alertState: List<AbstractAlertStateOneOf> = listOf(),
     )
-}
+    val reportPart: List<ReportPart> = listOf(),
+)

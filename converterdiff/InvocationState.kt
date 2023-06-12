@@ -2,8 +2,6 @@ package org.somda.protosdc.biceps.model
 
 
 data class InvocationState(
-    val enumType: EnumType,
-) {
     enum class EnumType {
         Wait,
         Start,
@@ -13,4 +11,5 @@ data class InvocationState(
         FinMod,
         Fail,
     }
-}
+    val enumType: EnumType,
+)

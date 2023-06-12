@@ -6,10 +6,9 @@ import org.somda.protosdc.biceps.model.AbstractContextStateOneOf
 
 data class AbstractContextReport(
     val abstractReport: AbstractReport,
-    val reportPart: List<ReportPart> = listOf(),
-) {
     data class ReportPart(
         val abstractReportPart: AbstractReportPart,
         val contextState: List<AbstractContextStateOneOf> = listOf(),
     )
-}
+    val reportPart: List<ReportPart> = listOf(),
+)

@@ -8,13 +8,12 @@ data class InstanceIdentifier(
     val extensionElement: Extension? = null,
     val type: CodedValue? = null,
     val identifierName: List<LocalizedText> = listOf(),
-    val rootAttr: RootAttr? = null,
-    val extensionAttr: ExtensionAttr? = null,
-) {
     data class RootAttr(
         val anyURI: String,
     )
+    val rootAttr: RootAttr? = null,
     data class ExtensionAttr(
         val string: String,
     )
-}
+    val extensionAttr: ExtensionAttr? = null,
+)

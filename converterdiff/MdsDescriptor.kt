@@ -13,15 +13,15 @@ import org.somda.protosdc.biceps.model.InstanceIdentifierOneOf
 
 data class MdsDescriptor(
     val abstractComplexDeviceComponentDescriptor: AbstractComplexDeviceComponentDescriptor,
-    val metaData: MetaData? = null,
-    val systemContext: SystemContextDescriptor? = null,
-    val clock: ClockDescriptor? = null,
-    val battery: List<BatteryDescriptor> = listOf(),
-    val approvedJurisdictions: ApprovedJurisdictions? = null,
-    val vmd: List<VmdDescriptor> = listOf(),
-) {
     data class MetaData(
         val extensionElement: Extension? = null,
+        data class Udi(
+            val extensionElement: Extension? = null,
+            val deviceIdentifier: String,
+            val humanReadableForm: String,
+            val issuer: InstanceIdentifierOneOf,
+            val jurisdiction: InstanceIdentifierOneOf? = null,
+        )
         val udi: List<Udi> = listOf(),
         val lotNumber: String? = null,
         val manufacturer: List<LocalizedText> = listOf(),
@@ -30,13 +30,11 @@ data class MdsDescriptor(
         val modelName: List<LocalizedText> = listOf(),
         val modelNumber: String? = null,
         val serialNumber: List<String> = listOf(),
-    ) {
-        data class Udi(
-            val extensionElement: Extension? = null,
-            val deviceIdentifier: String,
-            val humanReadableForm: String,
-            val issuer: InstanceIdentifierOneOf,
-            val jurisdiction: InstanceIdentifierOneOf? = null,
-        )
-    }
-}
+    )
+    val metaData: MetaData? = null,
+    val systemContext: SystemContextDescriptor? = null,
+    val clock: ClockDescriptor? = null,
+    val battery: List<BatteryDescriptor> = listOf(),
+    val approvedJurisdictions: ApprovedJurisdictions? = null,
+    val vmd: List<VmdDescriptor> = listOf(),
+)
