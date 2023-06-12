@@ -10,16 +10,14 @@ import org.somda.protosdc.biceps.model.ScoDescriptor
 import org.somda.protosdc.biceps.model.SystemContextDescriptor
 import org.somda.protosdc.biceps.model.VmdDescriptor
 
-data class AbstractDeviceComponentDescriptorOneOf(
-    sealed class AbstractDeviceComponentDescriptorOneOf {
-        data class ChoiceAbstractDeviceComponentDescriptor(val value: AbstractDeviceComponentDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceAbstractComplexDeviceComponentDescriptor(val value: AbstractComplexDeviceComponentDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceBatteryDescriptor(val value: BatteryDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceChannelDescriptor(val value: ChannelDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceClockDescriptor(val value: ClockDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceMdsDescriptor(val value: MdsDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceScoDescriptor(val value: ScoDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceSystemContextDescriptor(val value: SystemContextDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-        data class ChoiceVmdDescriptor(val value: VmdDescriptor) : AbstractDeviceComponentDescriptorOneOf()
-    }
-)
+sealed class AbstractDeviceComponentDescriptorOneOf {
+    data class ChoiceAbstractDeviceComponentDescriptor(val value: AbstractDeviceComponentDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceAbstractComplexDeviceComponentDescriptor(val value: AbstractComplexDeviceComponentDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceBatteryDescriptor(val value: BatteryDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceChannelDescriptor(val value: ChannelDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceClockDescriptor(val value: ClockDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceMdsDescriptor(val value: MdsDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceScoDescriptor(val value: ScoDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceSystemContextDescriptor(val value: SystemContextDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+    data class ChoiceVmdDescriptor(val value: VmdDescriptor) : AbstractDeviceComponentDescriptorOneOf()
+}

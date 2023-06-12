@@ -11,23 +11,26 @@ data class ClinicalInfo(
     val extensionElement: Extension? = null,
     val type: CodedValue? = null,
     val code: CodedValue? = null,
+    val criticality: Criticality? = null,
+    val description: List<LocalizedText> = listOf(),
+    val relatedMeasurement: List<RelatedMeasurement> = listOf(),
+) {
     data class Criticality(
+        val enumType: EnumType,
+    ) {
         enum class EnumType {
             Lo,
             Hi,
         }
-        val enumType: EnumType,
-    )
-    val criticality: Criticality? = null,
-    val description: List<LocalizedText> = listOf(),
+    }
     data class RelatedMeasurement(
         val value: Measurement,
+        val referenceRange: List<ReferenceRange> = listOf(),
+        val validityAttr: MeasurementValidity? = null,
+    ) {
         data class ReferenceRange(
             val range: Range,
             val meaning: CodedValue? = null,
         )
-        val referenceRange: List<ReferenceRange> = listOf(),
-        val validityAttr: MeasurementValidity? = null,
-    )
-    val relatedMeasurement: List<RelatedMeasurement> = listOf(),
-)
+    }
+}
