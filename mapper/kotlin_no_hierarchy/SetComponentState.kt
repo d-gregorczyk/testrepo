@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.AbstractDeviceComponentStateOneOf
 
 data class SetComponentState(
     val abstractSet: AbstractSet,
-    val proposedComponentState: List<AbstractDeviceComponentStateOneOf> = listOf(),
+val proposedComponentState: List<AbstractDeviceComponentStateOneOf> = listOf(),
 )

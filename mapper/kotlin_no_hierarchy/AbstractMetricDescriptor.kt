@@ -13,8 +13,8 @@ import org.somda.protosdc.biceps.model.EntryRef
 data class AbstractMetricDescriptor(
     val abstractDescriptor: AbstractDescriptor,
     val unit: CodedValue,
-    val bodySite: List<CodedValue> = listOf(),
-    val relation: List<Relation> = listOf(),
+val bodySite: List<CodedValue> = listOf(),
+val relation: List<Relation> = listOf(),
     val metricCategoryAttr: MetricCategory,
     val derivationMethodAttr: DerivationMethod? = null,
     val metricAvailabilityAttr: MetricAvailability,

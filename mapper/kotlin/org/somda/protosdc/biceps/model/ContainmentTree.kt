@@ -6,6 +6,6 @@ import org.somda.protosdc.biceps.model.ContainmentTreeInfo
 
 data class ContainmentTree(
     val extensionElement: Extension? = null,
-    val entry: List<ContainmentTreeEntry> = listOf(),
+val entry: List<ContainmentTreeEntry> = listOf(),
     val containmentTreeInfoAttr: ContainmentTreeInfo,
 )

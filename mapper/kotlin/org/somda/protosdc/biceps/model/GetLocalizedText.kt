@@ -7,9 +7,9 @@ import org.somda.protosdc.biceps.model.LocalizedTextWidth
 
 data class GetLocalizedText(
     val abstractGet: AbstractGet,
-    val ref: List<LocalizedTextRef> = listOf(),
+val ref: List<LocalizedTextRef> = listOf(),
     val version: ReferencedVersion? = null,
-    val lang: List<String> = listOf(),
-    val textWidth: List<LocalizedTextWidth> = listOf(),
-    val numberOfLines: List<Long> = listOf(),
+val lang: List<String> = listOf(),
+val textWidth: List<LocalizedTextWidth> = listOf(),
+val numberOfLines: List<Long> = listOf(),
 )

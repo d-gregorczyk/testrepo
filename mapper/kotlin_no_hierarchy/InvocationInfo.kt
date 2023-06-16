@@ -11,5 +11,5 @@ data class InvocationInfo(
     val transactionId: TransactionId,
     val invocationState: InvocationState,
     val invocationError: InvocationError? = null,
-    val invocationErrorMessage: List<LocalizedText> = listOf(),
+val invocationErrorMessage: List<LocalizedText> = listOf(),
 )

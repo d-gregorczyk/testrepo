@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.Range
 
 data class SetValueOperationState(
     val abstractOperationState: AbstractOperationState,
-    val allowedRange: List<Range> = listOf(),
+val allowedRange: List<Range> = listOf(),
 )

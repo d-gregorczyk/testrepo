@@ -7,7 +7,7 @@ import kotlin.time.Duration
 
 data class NumericMetricDescriptor(
     val abstractMetricDescriptor: AbstractMetricDescriptor,
-    val technicalRange: List<Range> = listOf(),
+val technicalRange: List<Range> = listOf(),
     val resolutionAttr: BigDecimal,
     val averagingPeriodAttr: Duration? = null,
 )

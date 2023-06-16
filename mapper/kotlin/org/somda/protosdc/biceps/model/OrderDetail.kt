@@ -10,7 +10,7 @@ data class OrderDetail(
     val extensionElement: Extension? = null,
     val start: LocalDateTime? = null,
     val end: LocalDateTime? = null,
-    val performer: List<PersonParticipation> = listOf(),
-    val service: List<CodedValue> = listOf(),
-    val imagingProcedure: List<ImagingProcedure> = listOf(),
+val performer: List<PersonParticipation> = listOf(),
+val service: List<CodedValue> = listOf(),
+val imagingProcedure: List<ImagingProcedure> = listOf(),
 )

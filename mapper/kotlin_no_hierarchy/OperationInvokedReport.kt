@@ -8,7 +8,7 @@ import org.somda.protosdc.biceps.model.HandleRef
 
 data class OperationInvokedReport(
     val abstractReport: AbstractReport,
-    val reportPart: List<ReportPart> = listOf(),
+val reportPart: List<ReportPart> = listOf(),
 ) {
     data class ReportPart(
         val abstractReportPart: AbstractReportPart,

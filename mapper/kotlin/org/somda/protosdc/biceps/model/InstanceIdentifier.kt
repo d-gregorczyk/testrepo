@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.LocalizedText
 data class InstanceIdentifier(
     val extensionElement: Extension? = null,
     val type: CodedValue? = null,
-    val identifierName: List<LocalizedText> = listOf(),
+val identifierName: List<LocalizedText> = listOf(),
     val rootAttr: RootAttr? = null,
     val extensionAttr: ExtensionAttr? = null,
 ) {

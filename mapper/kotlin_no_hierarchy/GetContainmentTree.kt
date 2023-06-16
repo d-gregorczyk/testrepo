@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.HandleRef
 
 data class GetContainmentTree(
     val abstractGet: AbstractGet,
-    val handleRef: List<HandleRef> = listOf(),
+val handleRef: List<HandleRef> = listOf(),
 )

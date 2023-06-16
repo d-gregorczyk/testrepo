@@ -8,6 +8,6 @@ import kotlin.time.Duration
 data class NumericMetricState(
     val abstractMetricState: AbstractMetricState,
     val metricValue: NumericMetricValue? = null,
-    val physiologicalRange: List<Range> = listOf(),
+val physiologicalRange: List<Range> = listOf(),
     val activeAveragingPeriodAttr: Duration? = null,
 )

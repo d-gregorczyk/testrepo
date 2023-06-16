@@ -6,6 +6,6 @@ import kotlin.time.Duration
 
 data class ClockDescriptor(
     val abstractDeviceComponentDescriptor: AbstractDeviceComponentDescriptor,
-    val timeProtocol: List<CodedValue> = listOf(),
+val timeProtocol: List<CodedValue> = listOf(),
     val resolutionAttr: Duration? = null,
 )

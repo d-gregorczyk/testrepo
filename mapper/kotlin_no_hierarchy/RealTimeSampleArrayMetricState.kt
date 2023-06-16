@@ -7,5 +7,5 @@ import org.somda.protosdc.biceps.model.Range
 data class RealTimeSampleArrayMetricState(
     val abstractMetricState: AbstractMetricState,
     val metricValue: SampleArrayValue? = null,
-    val physiologicalRange: List<Range> = listOf(),
+val physiologicalRange: List<Range> = listOf(),
 )

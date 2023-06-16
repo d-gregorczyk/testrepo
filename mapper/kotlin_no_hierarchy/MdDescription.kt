@@ -6,6 +6,6 @@ import org.somda.protosdc.biceps.model.VersionCounter
 
 data class MdDescription(
     val extensionElement: Extension? = null,
-    val mds: List<MdsDescriptor> = listOf(),
+val mds: List<MdsDescriptor> = listOf(),
     val descriptionVersionAttr: VersionCounter? = null,
 )

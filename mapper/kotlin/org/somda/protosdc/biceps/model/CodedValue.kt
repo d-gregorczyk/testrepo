@@ -7,9 +7,9 @@ import org.somda.protosdc.biceps.model.SymbolicCodeName
 
 data class CodedValue(
     val extensionElement: Extension? = null,
-    val codingSystemName: List<LocalizedText> = listOf(),
-    val conceptDescription: List<LocalizedText> = listOf(),
-    val translation: List<Translation> = listOf(),
+val codingSystemName: List<LocalizedText> = listOf(),
+val conceptDescription: List<LocalizedText> = listOf(),
+val translation: List<Translation> = listOf(),
     val codeAttr: CodeIdentifier,
     val codingSystemAttr: String? = null,
     val codingSystemVersionAttr: String? = null,

@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.AlertConditionReference
 
 data class AlertSystemState(
     val abstractAlertState: AbstractAlertState,
-    val systemSignalActivation: List<SystemSignalActivation> = listOf(),
+val systemSignalActivation: List<SystemSignalActivation> = listOf(),
     val lastSelfCheckAttr: Timestamp? = null,
     val selfCheckCountAttr: Long? = null,
     val presentPhysiologicalAlarmConditionsAttr: AlertConditionReference? = null,

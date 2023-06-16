@@ -7,8 +7,8 @@ import kotlin.time.Duration
 
 data class AlertSystemDescriptor(
     val abstractAlertDescriptor: AbstractAlertDescriptor,
-    val alertCondition: List<AlertConditionDescriptorOneOf> = listOf(),
-    val alertSignal: List<AlertSignalDescriptor> = listOf(),
+val alertCondition: List<AlertConditionDescriptorOneOf> = listOf(),
+val alertSignal: List<AlertSignalDescriptor> = listOf(),
     val maxPhysiologicalParallelAlarmsAttr: Int? = null,
     val maxTechnicalParallelAlarmsAttr: Int? = null,
     val selfCheckPeriodAttr: Duration? = null,

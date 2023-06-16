@@ -7,7 +7,7 @@ import kotlin.time.Duration
 
 data class RealTimeSampleArrayMetricDescriptor(
     val abstractMetricDescriptor: AbstractMetricDescriptor,
-    val technicalRange: List<Range> = listOf(),
+val technicalRange: List<Range> = listOf(),
     val resolutionAttr: BigDecimal,
     val samplePeriodAttr: Duration,
 )

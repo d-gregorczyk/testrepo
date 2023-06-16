@@ -6,7 +6,7 @@ import org.somda.protosdc.biceps.model.QualifiedName
 
 data class ActivateOperationDescriptor(
     val abstractSetStateOperationDescriptor: AbstractSetStateOperationDescriptor,
-    val argument: List<Argument> = listOf(),
+val argument: List<Argument> = listOf(),
 ) {
     data class Argument(
         val argName: CodedValue,

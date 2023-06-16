@@ -5,7 +5,7 @@ import org.somda.protosdc.biceps.model.Extension
 
 data class Activate(
     val abstractSet: AbstractSet,
-    val argument: List<Argument> = listOf(),
+val argument: List<Argument> = listOf(),
 ) {
     data class Argument(
         val extensionElement: Extension? = null,
