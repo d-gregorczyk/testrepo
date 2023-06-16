@@ -10,7 +10,7 @@ import org.somda.protosdc.biceps.model.CodedValue
 data class AbstractMetricValue(
     val extensionElement: Extension? = null,
     val metricQuality: MetricQuality,
-    val annotation: List<Annotation> = listOf(),
+val annotation: List<Annotation> = listOf(),
     val startTimeAttr: Timestamp? = null,
     val stopTimeAttr: Timestamp? = null,
     val determinationTimeAttr: Timestamp? = null,

@@ -16,20 +16,20 @@ data class MdsDescriptor(
     val metaData: MetaData? = null,
     val systemContext: SystemContextDescriptor? = null,
     val clock: ClockDescriptor? = null,
-    val battery: List<BatteryDescriptor> = listOf(),
+val battery: List<BatteryDescriptor> = listOf(),
     val approvedJurisdictions: ApprovedJurisdictions? = null,
-    val vmd: List<VmdDescriptor> = listOf(),
+val vmd: List<VmdDescriptor> = listOf(),
 ) {
     data class MetaData(
         val extensionElement: Extension? = null,
-        val udi: List<Udi> = listOf(),
+val udi: List<Udi> = listOf(),
         val lotNumber: String? = null,
-        val manufacturer: List<LocalizedText> = listOf(),
+val manufacturer: List<LocalizedText> = listOf(),
         val manufactureDate: LocalDateTime? = null,
         val expirationDate: LocalDateTime? = null,
-        val modelName: List<LocalizedText> = listOf(),
+val modelName: List<LocalizedText> = listOf(),
         val modelNumber: String? = null,
-        val serialNumber: List<String> = listOf(),
+val serialNumber: List<String> = listOf(),
     ) {
         data class Udi(
             val extensionElement: Extension? = null,

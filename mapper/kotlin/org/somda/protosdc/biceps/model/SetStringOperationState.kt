@@ -7,6 +7,6 @@ data class SetStringOperationState(
     val allowedValues: AllowedValues? = null,
 ) {
     data class AllowedValues(
-        val value: List<String> = listOf(),
+val value: List<String> = listOf(),
     )
 }

@@ -18,8 +18,8 @@ data class WorkflowContextState(
         val patient: PersonReferenceOneOf,
         val assignedLocation: LocationReference? = null,
         val visitNumber: InstanceIdentifierOneOf? = null,
-        val dangerCode: List<CodedValue> = listOf(),
-        val relevantClinicalInfo: List<ClinicalInfo> = listOf(),
+val dangerCode: List<CodedValue> = listOf(),
+val relevantClinicalInfo: List<ClinicalInfo> = listOf(),
         val requestedOrderDetail: RequestedOrderDetail? = null,
         val performedOrderDetail: PerformedOrderDetail? = null,
     ) {
@@ -32,7 +32,7 @@ data class WorkflowContextState(
         data class PerformedOrderDetail(
             val orderDetail: OrderDetail,
             val fillerOrderNumber: InstanceIdentifierOneOf? = null,
-            val resultingClinicalInfo: List<ClinicalInfo> = listOf(),
+val resultingClinicalInfo: List<ClinicalInfo> = listOf(),
         )
     }
 }

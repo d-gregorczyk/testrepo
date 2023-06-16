@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.AbstractOperationDescriptorOneOf
 
 data class ScoDescriptor(
     val abstractDeviceComponentDescriptor: AbstractDeviceComponentDescriptor,
-    val operation: List<AbstractOperationDescriptorOneOf> = listOf(),
+val operation: List<AbstractOperationDescriptorOneOf> = listOf(),
 )

@@ -12,8 +12,8 @@ data class SystemContextDescriptor(
     val abstractDeviceComponentDescriptor: AbstractDeviceComponentDescriptor,
     val patientContext: PatientContextDescriptor? = null,
     val locationContext: LocationContextDescriptor? = null,
-    val ensembleContext: List<EnsembleContextDescriptor> = listOf(),
-    val operatorContext: List<OperatorContextDescriptor> = listOf(),
-    val workflowContext: List<WorkflowContextDescriptor> = listOf(),
-    val meansContext: List<MeansContextDescriptor> = listOf(),
+val ensembleContext: List<EnsembleContextDescriptor> = listOf(),
+val operatorContext: List<OperatorContextDescriptor> = listOf(),
+val workflowContext: List<WorkflowContextDescriptor> = listOf(),
+val meansContext: List<MeansContextDescriptor> = listOf(),
 )

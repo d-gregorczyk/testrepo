@@ -5,6 +5,6 @@ import org.somda.protosdc.biceps.model.QualifiedName
 
 data class GetContextStatesByFilter(
     val abstractGet: AbstractGet,
-    val filter: List<String> = listOf(),
+val filter: List<String> = listOf(),
     val contextTypeAttr: QualifiedName? = null,
 )

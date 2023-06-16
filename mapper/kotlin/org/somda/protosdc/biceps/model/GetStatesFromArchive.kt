@@ -9,5 +9,5 @@ data class GetStatesFromArchive(
     val abstractGet: AbstractGet,
     val stateRevisions: VersionFrame? = null,
     val timeFrame: TimeFrame? = null,
-    val handle: List<HandleRef> = listOf(),
+val handle: List<HandleRef> = listOf(),
 )

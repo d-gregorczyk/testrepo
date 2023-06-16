@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.AbstractContextStateOneOf
 
 data class SetContextState(
     val abstractSet: AbstractSet,
-    val proposedContextState: List<AbstractContextStateOneOf> = listOf(),
+val proposedContextState: List<AbstractContextStateOneOf> = listOf(),
 )

@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.RealTimeSampleArrayMetricState
 
 data class WaveformStream(
     val abstractReport: AbstractReport,
-    val state: List<RealTimeSampleArrayMetricState> = listOf(),
+val state: List<RealTimeSampleArrayMetricState> = listOf(),
 )

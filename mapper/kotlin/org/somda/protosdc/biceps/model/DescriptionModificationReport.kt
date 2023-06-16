@@ -9,12 +9,12 @@ import org.somda.protosdc.biceps.model.DescriptionModificationType
 
 data class DescriptionModificationReport(
     val abstractReport: AbstractReport,
-    val reportPart: List<ReportPart> = listOf(),
+val reportPart: List<ReportPart> = listOf(),
 ) {
     data class ReportPart(
         val abstractReportPart: AbstractReportPart,
-        val descriptor: List<AbstractDescriptorOneOf> = listOf(),
-        val state: List<AbstractStateOneOf> = listOf(),
+val descriptor: List<AbstractDescriptorOneOf> = listOf(),
+val state: List<AbstractStateOneOf> = listOf(),
         val parentDescriptorAttr: HandleRef? = null,
         val modificationTypeAttr: DescriptionModificationType? = null,
     )

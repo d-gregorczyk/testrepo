@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.LocalizedText
 
 data class GetLocalizedTextResponse(
     val abstractGetResponse: AbstractGetResponse,
-    val text: List<LocalizedText> = listOf(),
+val text: List<LocalizedText> = listOf(),
 )

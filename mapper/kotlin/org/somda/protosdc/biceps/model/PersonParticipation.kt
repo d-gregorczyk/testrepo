@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.CodedValue
 
 data class PersonParticipation(
     val personReference: PersonReference,
-    val role: List<CodedValue> = listOf(),
+val role: List<CodedValue> = listOf(),
 )

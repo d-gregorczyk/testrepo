@@ -9,8 +9,8 @@ import kotlin.time.Duration
 
 data class AlertConditionDescriptor(
     val abstractAlertDescriptor: AbstractAlertDescriptor,
-    val source: List<HandleRef> = listOf(),
-    val causeInfo: List<CauseInfo> = listOf(),
+val source: List<HandleRef> = listOf(),
+val causeInfo: List<CauseInfo> = listOf(),
     val kindAttr: AlertConditionKind,
     val priorityAttr: AlertConditionPriority,
     val defaultConditionGenerationDelayAttr: Duration? = null,

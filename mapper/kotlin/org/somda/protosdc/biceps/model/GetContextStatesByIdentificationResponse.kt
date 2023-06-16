@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.AbstractContextStateOneOf
 
 data class GetContextStatesByIdentificationResponse(
     val abstractGetResponse: AbstractGetResponse,
-    val contextState: List<AbstractContextStateOneOf> = listOf(),
+val contextState: List<AbstractContextStateOneOf> = listOf(),
 )

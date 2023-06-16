@@ -5,5 +5,5 @@ import org.somda.protosdc.biceps.model.AbstractContextStateOneOf
 
 data class GetContextStatesByFilterResponse(
     val abstractGetResponse: AbstractGetResponse,
-    val contextState: List<AbstractContextStateOneOf> = listOf(),
+val contextState: List<AbstractContextStateOneOf> = listOf(),
 )

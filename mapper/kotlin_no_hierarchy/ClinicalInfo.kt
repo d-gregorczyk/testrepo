@@ -12,8 +12,8 @@ data class ClinicalInfo(
     val type: CodedValue? = null,
     val code: CodedValue? = null,
     val criticality: Criticality? = null,
-    val description: List<LocalizedText> = listOf(),
-    val relatedMeasurement: List<RelatedMeasurement> = listOf(),
+val description: List<LocalizedText> = listOf(),
+val relatedMeasurement: List<RelatedMeasurement> = listOf(),
 ) {
     data class Criticality(
         val enumType: EnumType,
@@ -25,7 +25,7 @@ data class ClinicalInfo(
     }
     data class RelatedMeasurement(
         val value: Measurement,
-        val referenceRange: List<ReferenceRange> = listOf(),
+val referenceRange: List<ReferenceRange> = listOf(),
         val validityAttr: MeasurementValidity? = null,
     ) {
         data class ReferenceRange(

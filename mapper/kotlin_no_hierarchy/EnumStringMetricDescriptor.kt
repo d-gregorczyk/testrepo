@@ -7,7 +7,7 @@ import org.somda.protosdc.biceps.model.Measurement
 
 data class EnumStringMetricDescriptor(
     val stringMetricDescriptor: StringMetricDescriptor,
-    val allowedValue: List<AllowedValue> = listOf(),
+val allowedValue: List<AllowedValue> = listOf(),
 ) {
     data class AllowedValue(
         val value: String,

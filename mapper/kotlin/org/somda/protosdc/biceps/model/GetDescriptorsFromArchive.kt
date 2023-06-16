@@ -9,5 +9,5 @@ data class GetDescriptorsFromArchive(
     val abstractGet: AbstractGet,
     val descriptorRevisions: VersionFrame? = null,
     val timeFrame: TimeFrame? = null,
-    val handle: List<HandleRef> = listOf(),
+val handle: List<HandleRef> = listOf(),
 )

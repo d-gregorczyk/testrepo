@@ -8,8 +8,8 @@ import org.somda.protosdc.biceps.model.Timestamp
 
 data class AbstractContextState(
     val abstractMultiState: AbstractMultiState,
-    val validator: List<InstanceIdentifierOneOf> = listOf(),
-    val identification: List<InstanceIdentifierOneOf> = listOf(),
+val validator: List<InstanceIdentifierOneOf> = listOf(),
+val identification: List<InstanceIdentifierOneOf> = listOf(),
     val contextAssociationAttr: ContextAssociation? = null,
     val bindingMdibVersionAttr: ReferencedVersion? = null,
     val unbindingMdibVersionAttr: ReferencedVersion? = null,

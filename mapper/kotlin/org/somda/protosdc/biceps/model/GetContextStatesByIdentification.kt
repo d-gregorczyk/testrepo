@@ -6,6 +6,6 @@ import org.somda.protosdc.biceps.model.QualifiedName
 
 data class GetContextStatesByIdentification(
     val abstractGet: AbstractGet,
-    val identification: List<InstanceIdentifierOneOf> = listOf(),
+val identification: List<InstanceIdentifierOneOf> = listOf(),
     val contextTypeAttr: QualifiedName? = null,
 )

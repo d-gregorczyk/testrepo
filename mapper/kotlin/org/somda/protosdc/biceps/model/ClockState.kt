@@ -9,7 +9,7 @@ import org.somda.protosdc.biceps.model.TimeZone
 data class ClockState(
     val abstractDeviceComponentState: AbstractDeviceComponentState,
     val activeSyncProtocol: CodedValue? = null,
-    val referenceSource: List<String> = listOf(),
+val referenceSource: List<String> = listOf(),
     val dateAndTimeAttr: Timestamp? = null,
     val remoteSyncAttr: Boolean,
     val accuracyAttr: BigDecimal? = null,

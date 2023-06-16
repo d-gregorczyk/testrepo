@@ -8,7 +8,7 @@ import kotlin.time.Duration
 
 data class AbstractMetricState(
     val abstractState: AbstractState,
-    val bodySite: List<CodedValue> = listOf(),
+val bodySite: List<CodedValue> = listOf(),
     val physicalConnector: PhysicalConnectorInfo? = null,
     val activationStateAttr: ComponentActivation? = null,
     val activeDeterminationPeriodAttr: Duration? = null,

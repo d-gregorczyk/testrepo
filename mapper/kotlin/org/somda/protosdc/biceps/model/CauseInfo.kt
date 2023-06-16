@@ -7,5 +7,5 @@ import org.somda.protosdc.biceps.model.LocalizedText
 data class CauseInfo(
     val extensionElement: Extension? = null,
     val remedyInfo: RemedyInfo? = null,
-    val description: List<LocalizedText> = listOf(),
+val description: List<LocalizedText> = listOf(),
 )
