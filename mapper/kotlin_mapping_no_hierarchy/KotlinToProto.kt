@@ -2571,7 +2571,7 @@ object KotlinToProto {
     fun map_org_somda_protosdc_biceps_model_BaseDemographicsOneOf(source: org.somda.protosdc.biceps.model.BaseDemographicsOneOf): org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg {
         when (source) {
             org.somda.protosdc.biceps.model.BaseDemographicsOneOf.valueBaseDemographics -> org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.newBuilder().setBaseDemographics(map_org_somda_protosdc_biceps_model_BaseDemographics(source.value)).build()
-            org.somda.protosdc.biceps.model.BaseDemographicsOneOf.valueNeonatalPatientDemographicsCoreData -> org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.newBuilder().setNeonatalPatientDemographicsCoreData(map_org_somda_protosdc_proto_model_biceps_NeonatalPatientDemographicsCoreDataMsg(source.value)).build()
+            org.somda.protosdc.biceps.model.BaseDemographicsOneOf.valueNeonatalPatientDemographicsCoreData -> org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.newBuilder().setNeonatalPatientDemographicsCoreData(map_org_somda_protosdc_biceps_model_NeonatalPatientDemographicsCoreData(source.value)).build()
             org.somda.protosdc.biceps.model.BaseDemographicsOneOf.valuePatientDemographicsCoreData -> org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.newBuilder().setPatientDemographicsCoreData(map_org_somda_protosdc_biceps_model_PatientDemographicsCoreData(source.value)).build()
             else -> throw Exception("Unknown enum value $source")
         }

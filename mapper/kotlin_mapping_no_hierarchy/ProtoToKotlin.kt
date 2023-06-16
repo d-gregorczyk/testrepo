@@ -2796,7 +2796,7 @@ object ProtoToKotlin {
     fun map_org_somda_protosdc_proto_model_biceps_BaseDemographicsOneOfMsg(source: org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg): org.somda.protosdc.biceps.model.BaseDemographicsOneOf {
         return when (source.baseDemographicsOneOfCase) {
             org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.BaseDemographicsOneOfCase.BASE_DEMOGRAPHICS -> org.somda.protosdc.biceps.model.BaseDemographicsOneOf.ChoiceBaseDemographics(map_org_somda_protosdc_proto_model_biceps_BaseDemographicsMsg(source.baseDemographics))
-            org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.BaseDemographicsOneOfCase.NEONATAL_PATIENT_DEMOGRAPHICS_CORE_DATA -> org.somda.protosdc.biceps.model.BaseDemographicsOneOf.ChoiceNeonatalPatientDemographicsCoreData(map_org_somda_protosdc_biceps_model_NeonatalPatientDemographicsCoreData(source.neonatalPatientDemographicsCoreData))
+            org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.BaseDemographicsOneOfCase.NEONATAL_PATIENT_DEMOGRAPHICS_CORE_DATA -> org.somda.protosdc.biceps.model.BaseDemographicsOneOf.ChoiceNeonatalPatientDemographicsCoreData(map_org_somda_protosdc_proto_model_biceps_NeonatalPatientDemographicsCoreDataMsg(source.neonatalPatientDemographicsCoreData))
             org.somda.protosdc.proto.model.biceps.BaseDemographicsOneOfMsg.BaseDemographicsOneOfCase.PATIENT_DEMOGRAPHICS_CORE_DATA -> org.somda.protosdc.biceps.model.BaseDemographicsOneOf.ChoicePatientDemographicsCoreData(map_org_somda_protosdc_proto_model_biceps_PatientDemographicsCoreDataMsg(source.patientDemographicsCoreData))
             else -> throw Exception("Unknown enum value $source")
         }
