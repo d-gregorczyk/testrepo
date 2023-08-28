@@ -12,7 +12,7 @@ from git import Repo
 # for git_hash in output.split():
 #     print(git_hash)
 
-repo = Repo("../..")
+repo = Repo(".")
 git = repo.git
 git.fetch("origin")
 git.checkout("master")
