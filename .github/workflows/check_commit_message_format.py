@@ -14,6 +14,9 @@ from git import Repo
 
 repo = Repo("../..")
 git = repo.git
+git.fetch("origin")
 git.checkout("master")
-output = git.rev_list("--ancestry_path", "master.." + sys.argv[1])
-print(output)
+git.checkout(sys.argv[1])
+output = git.rev_list("--ancestry-path", "master.." + sys.argv[1])
+for git_hash in output.split():
+    print(git_hash)
