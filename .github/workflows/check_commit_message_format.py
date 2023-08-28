@@ -1,1 +1,3 @@
-print("This line will be printed.")
+import os
+
+os.system('git --version')
