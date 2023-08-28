@@ -3,6 +3,8 @@ import sys
 
 os.system('git fetch origin')
 os.system('git checkout master')
-os.system('git pull')
-output = os.popen('git log --left-right --graph --cherry-mark --oneline master...' + sys.argv[1]).read()
-print(output)
+output = os.popen('git rev-list --ancestry-path master..' + sys.argv[1]).read()
+
+for git_hash in output.split():
+    print(git_hash)
+
