@@ -14,11 +14,11 @@ from git import Repo
 
 repo = Repo(".")
 git = repo.git
-print(git.fetch("origin", sys.argv[1]))
-print(git.checkout(sys.argv[1]))
-print(git.fetch("origin", "master"))
-print(git.checkout("master"))
-print(git.checkout(sys.argv[1]))
+#print(git.fetch("origin", sys.argv[1]))
+#print(git.checkout(sys.argv[1]))
+#print(git.fetch("origin", "master"))
+#print(git.checkout("master"))
+#print(git.checkout(sys.argv[1]))
 output = git.rev_list("--ancestry-path", "origin/master.." + sys.argv[1])
 #output = git.rev_list("origin..HEAD")
 print(git.branch())
