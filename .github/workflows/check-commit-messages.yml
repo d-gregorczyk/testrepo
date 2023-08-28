@@ -19,4 +19,4 @@ jobs:
           cache: 'pip'
       - run: |
           pip install GitPython
-          python check_commit_message_format.py "${{ steps.extract_branch.outputs.branch }}"
+          python .github/workflows/check_commit_message_format.py "${{ steps.extract_branch.outputs.branch }}"
