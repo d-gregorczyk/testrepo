@@ -18,5 +18,6 @@ git.fetch("origin")
 git.checkout("master")
 git.checkout(sys.argv[1])
 output = git.rev_list("--ancestry-path", "master.." + sys.argv[1])
+print(git.branch())
 for git_hash in output.split():
     print(git_hash)
